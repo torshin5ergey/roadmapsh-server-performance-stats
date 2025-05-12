@@ -15,8 +15,8 @@ This is my solution to the [Server Performance Stats project](https://roadmap.sh
 - [x] Total CPU usage
 - [x] Total memory usage (Free vs Used including percentage)
 - [x] Total disk usage (Free vs Used including percentage)
-- [ ] Top 5 processes by CPU usage
-- [ ] Top 5 processes by memory usage
+- [x] Top 5 processes by CPU usage
+- [x] Top 5 processes by memory usage
 - [ ] **Advanced**. Add more stats such as os version, uptime, load average, logged in users, failed login attempts etc
 
 ## Prerequisites

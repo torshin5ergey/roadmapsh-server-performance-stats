@@ -53,7 +53,13 @@ echo "       Free: $((disk_free/1073741824)) GB (${disk_free_percentage}%)"
 echo "       Used: $((disk_used/1073741824)) GB (${disk_used_percentage}%)"
 
 # Top 5 CPU processes
+# ps
+echo "=== Top 5 CPU processes ==="
+ps -eo pid,user,%cpu,%mem,comm --sort=-%cpu | head -n 6
 
 # Top 5 Mem processes
+# ps
+echo "=== Top 5 Memory processes ==="
+ps -eo pid,user,%mem,%cpu,comm --sort=-%mem | head -n 6
 
 # Count failed login attempts
