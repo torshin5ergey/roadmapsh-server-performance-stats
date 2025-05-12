@@ -11,13 +11,13 @@ This is my solution to the [Server Performance Stats project](https://roadmap.sh
 
 ## Project Requirements
 
-- [ ] Write a script server-stats.sh that can analyse basic server performance stats. You should be able to run the script on any Linux server and it should give you the following stats:
+- [x] Write a script server-stats.sh that can analyse basic server performance stats. You should be able to run the script on any Linux server and it should give you the following stats:
 - [x] Total CPU usage
 - [x] Total memory usage (Free vs Used including percentage)
 - [x] Total disk usage (Free vs Used including percentage)
 - [x] Top 5 processes by CPU usage
 - [x] Top 5 processes by memory usage
-- [ ] **Advanced**. Add more stats such as os version, uptime, load average, logged in users, failed login attempts etc
+- [x] **Advanced**. Add more stats such as os version, uptime, load average, logged in users, failed login attempts etc
 
 ## Prerequisites
 
