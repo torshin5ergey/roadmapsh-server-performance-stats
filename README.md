@@ -3,6 +3,7 @@
 This is my solution to the [Server Performance Stats project](https://roadmap.sh/projects/server-stats) in the [DevOps roadmap](https://roadmap.sh/devops) from [roadmap.sh](https://roadmap.sh/)
 
 **Table of Contents**
+- [References](#references)
 - [Project Requirements](#project-requirements)
 - [Prerequisites](#prerequisites)
 - [How To Use](#how-to-use)
@@ -17,6 +18,16 @@ This is my solution to the [Server Performance Stats project](https://roadmap.sh
   - [Disk Usage](#disk-usage)
   - [Top Processes](#top-processes)
 - [Author](#author)
+
+## References
+
+- [man free](https://www.man7.org/linux/man-pages/man1/free.1.html)
+- [man /etc/os-release](https://www.man7.org/linux/man-pages/man5/os-release.5.html)
+- [man /proc/uptime](https://www.man7.org/linux/man-pages/man5/proc_uptime.5.html)
+- [man /proc/loadavg](https://www.man7.org/linux/man-pages/man5/proc_loadavg.5.html)
+- [man who](https://www.man7.org/linux/man-pages/man1/who.1.html)
+- [man /proc/stat](https://www.man7.org/linux/man-pages/man5/proc_stat.5.html)
+- [man /proc/meminfo](https://www.man7.org/linux/man-pages/man5/proc_meminfo.5.html)
 
 ## Project Requirements
 
