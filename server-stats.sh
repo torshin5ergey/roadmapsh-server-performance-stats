@@ -23,6 +23,18 @@ echo "Logged in users: $(who | wc -l)"
 cat /proc/stat | grep cpu | head -1 | awk '{print ($5*100)/($2+$3+$4+$5+$6+$7+$8+$9+$10)}'| awk '{printf "CPU total usage: %.0f%%\n", 100-$1}'
 
 # Mem
+# /proc/meminfo
+# Total memory usage (Free vs Used including percentage)
+mem_total=$(grep "MemTotal" /proc/meminfo | awk '{print $2}')
+mem_free=$(grep "MemAvailable" /proc/meminfo | awk '{print $2}')
+mem_free_percentage=$((mem_free * 100 / mem_total))
+mem_used=$(free | awk '/Mem/ {print $3}')
+mem_used_percentage=$((mem_used * 100 / mem_total))
+
+echo "   Memory usage:"
+echo "      Total: $((mem_total/1024)) MB"
+echo "       Free: $((mem_free/1024)) MB, ${mem_free_percentage}%"
+echo "       Used: $((mem_used/1024)) MB, ${mem_used_percentage}%"
 
 # Disk
 
