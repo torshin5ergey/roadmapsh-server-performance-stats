@@ -22,6 +22,9 @@ echo "   Load average: $(cat /proc/loadavg | awk '{ printf "%.1f %.1f %.1f\n", $
 # /var/run/utmp
 echo "Logged in users: $(who | wc -l)"
 
+# Count failed login attempts
+echo "  Failed logins: $(grep "Failed password" /var/log/auth.log | wc -l)"
+
 # CPU total usage
 cat /proc/stat | grep cpu | head -1 | awk '{print ($5*100)/($2+$3+$4+$5+$6+$7+$8+$9+$10)}'| awk '{printf "CPU total usage: %.0f%%\n", 100-$1}'
 
