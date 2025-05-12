@@ -36,8 +36,8 @@ mem_used_percentage=$((mem_used * 100 / mem_total))
 
 echo "   Memory usage:"
 echo "      Total: $((mem_total/1024)) MB"
-echo "       Free: $((mem_free/1024)) MB, ${mem_free_percentage}%"
-echo "       Used: $((mem_used/1024)) MB, ${mem_used_percentage}%"
+echo "       Free: $((mem_free/1024)) MB (${mem_free_percentage}%)"
+echo "       Used: $((mem_used/1024)) MB (${mem_used_percentage}%)"
 
 # Disk
 # Total disk usage (Free vs Used including percentage)
