@@ -42,6 +42,15 @@ echo "       Used: $((mem_used/1024)) MB, ${mem_used_percentage}%"
 # Disk
 # Total disk usage (Free vs Used including percentage)
 # df
+disk_total=$(df -B1 --output=size / | awk 'NR==2 {print $1}')
+disk_free=$(df -B1 --output=avail / | awk 'NR==2 {print $1}')
+disk_free_percentage=$((disk_free * 100 / disk_total))
+disk_used=$(df -B1 --output=used / | awk 'NR==2 {print $1}')
+disk_used_percentage=$((disk_used * 100 / disk_total))
+echo "     Disk usage:"
+echo "      Total: $((disk_total/1073741824)) GB"
+echo "       Free: $((disk_free/1073741824)) GB (${disk_free_percentage}%)"
+echo "       Used: $((disk_used/1073741824)) GB (${disk_used_percentage}%)"
 
 # Top 5 CPU processes
 
